@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
   let avatar = user.avatarURL({ dynamic: true, format: "png", size: 1024 });
 
   let embed = new Discord.MessageEmbed() 
-    .setColor(`#4cd8b2`) 
+    .setColor(`#8A2BE2`) 
     .setTitle(`Avatar de ${user.username}`) 
     .setImage(avatar) 
     .setFooter(`• Autor: ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}));

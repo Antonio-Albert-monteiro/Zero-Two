@@ -17,4 +17,4 @@ module.exports.run = async (client, message, args) => {
     .setDescription(`**Estou online há:**\n${uptime}`)
 
   message.channel.send(embed);
-};l
+};
