@@ -7,7 +7,28 @@ const banco = require("./banco.js")
 
 const database = firebase.database();
 
+client.on("guildCreate", (guild, message) => {
+  let canal = client.channels.cache.get('816842081045315594');
+    let embedaddguilda = new Discord.MessageEmbed()
+        .setColor('8A2BE2')
+        .setTitle(`Adicionado`)
+        .setDescription(`Fui adicionado no servidor \n**${guild.name}** \nid do server: ${guild.id} \nTotal de membros: ${guild && guild.memberCount} membros.\nestamos agora em ${client.guilds.cache.size} servers!`);
+    canal.send(embedaddguilda).then(msg => {
+        msg.react('👏');
+    });
+})
 
+client.on("guildDelete", (guild, message) => {
+  let canal = client.channels.cache.get('816842081045315594');
+    let embedaddguilda = new Discord.MessageEmbed()
+        .setColor('8A2BE2')
+        .setTitle(`BYE...`)
+        .setDescription(`infelismente Alguem me tirou da server: ${guild.name} que tinha ${guild.memberCount} membros! agora estou em ${client.guilds.cache.size} servers`
+        );
+    canal.send(embedaddguilda).then(msg => {
+        msg.react('✊');
+    });
+})
 
 client.on("message", function(message) {
   if (message.channel.type == "DM") return;
