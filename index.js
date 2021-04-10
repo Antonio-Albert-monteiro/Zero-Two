@@ -7,6 +7,8 @@ const banco = require("./banco.js")
 
 const database = firebase.database();
 
+
+
 client.on("message", function(message) {
   if (message.channel.type == "DM") return;
   if (message.author.bot) return;
