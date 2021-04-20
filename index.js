@@ -7,6 +7,47 @@ const banco = require("./banco.js")
 
 const database = firebase.database();
 
+client.on("guildMemberAdd", async (member) => { 
+  let guild = await client.guilds.cache.get("816830052795809802");
+  let channel = await client.channels.cache.get("816831474475991060");
+  if (guild != member.guild) {
+    return console.log("Sem boas-vindas pra você! Sai daqui saco pela.");
+   } else {
+      let embed = await new Discord.MessageEmbed()
+      .setColor("#7c2ae8")
+      .setAuthor(member.user.tag, member.user.displayAvatarURL())
+      .setTitle(`Boas-vindas`)
+      .setImage("https://imgur.com/3vYVlHb.gif")
+      .setDescription(`**${member.user}**, bem-vindo(a) ao servidor **${guild.name}**! Atualmente estamos com **${member.guild.memberCount} membros**, divirta-se conosco! :heart:`)
+      .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
+      .setFooter("Seja bem vindo")
+      .setTimestamp();
+
+    channel.send(embed);
+  }
+});
+
+client.on("guildMemberRemove", async (member) => { 
+
+  let guild = await client.guilds.cache.get("816830052795809802");
+  let channel = await client.channels.cache.get("822400247925964811");
+  if (guild != member.guild) {
+    return console.log("Algum saco pela saiu do servidor. Mas não é nesse, então tá tudo bem :)");
+   } else {
+      let embed = await new Discord.MessageEmbed()
+      .setColor("#7c2ae8")
+      .setAuthor(member.user.tag, member.user.displayAvatarURL())
+      .setTitle(`Adeus!`)
+      .setImage("https://imgur.com/3vYVlHb.gif")
+      .setDescription(`**${member.user.username}**, saiu do servidor! :broken_heart:`)
+      .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
+      .setFooter("foi bom inguanto durou😭")
+      .setTimestamp();
+
+    channel.send(embed);
+  }
+});
+
 client.on("guildCreate", (guild, message) => {
   let canal = client.channels.cache.get('816842081045315594');
     let embedaddguilda = new Discord.MessageEmbed()
@@ -34,35 +75,29 @@ client.on("message", function(message) {
   if (message.channel.type == "DM") return;
   if (message.author.bot) return;
   
-  database.ref(`Usuarios/${message.author.id}`)
+  database.ref(`Xp/${message.author.id}`)
   .once("value").then(async function(db) {
     if (db.val() == null) {
-      database.ref(`Usuarios/${message.author.id}`)
+      database.ref(`Xp/${message.author.id}`)
       .set ({
         xp: 0,
         level: 1,
-        limite: 100,
-        premiun: false,
-        banco: 0,
-        money: 10
+        limite: 100
       })
     } else {
         let geraXP = Math.floor(Math.random() * 25) + 1;
         let geralimite = Math.floor(Math.random() * 550) + 250;
         
       if (db.val().limite <= db.val().xp) {
-        database.ref(`Usuarios/${message.author.id}`)
+        database.ref(`Xp/${message.author.id}`)
         .update ({
           xp: db.val().xp + geraXP,
           level: db.val().level + 1,
-          limite: db.val().limite + geralimite,
-          premiun: db.val().premiun,
-          banco: db.val().banco,
-          money: db.val().money
+          limite: db.val().limite + geralimite
        })
       message.channel.send(`parabens ${message.author} vc passou para o nivel ${db.val().level+1}`)
       } else {
-        database.ref(`Usuarios/${message.author.id}`)
+        database.ref(`Xp/${message.author.id}`)
         .update ({
           xp: db.val().xp + geraXP
         })
@@ -127,6 +162,5 @@ client.on("message", message => {
      }
     
 });
-
 
 client.login(process.env.TOKEN);
