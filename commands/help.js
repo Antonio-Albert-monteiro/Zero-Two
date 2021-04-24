@@ -50,7 +50,7 @@ exports.run = async (client, message, args) => {
 				.setTitle(`Central de comandos`)
 				.setDescription(`Economia`)
 				.addFields(
-				    { name: "Em desemvolvimento", value `;-;`}
+				    { name: "Em desemvolvimento", value ";-;"}
 				)
 			 )
 				.setColor('#8A2BE2');
@@ -60,14 +60,19 @@ exports.run = async (client, message, args) => {
 		
 		coletor2.on('collect', c => {
 		    let embed = new Discord.MessageEmbed()
-		        .setTitle()
-		        .setDescription()
-		        .setColor()
+		        .setTitle("Central de comandos")
+		        .setDescription(``)
+		        .setColor('#8A2BE2')
 		        .addFields(
-		            { name: "Avatar", value: `Mostra o avatar do usuario` },
-                    { name: "clima", value: `mostar o clima` },
-                    { name: "covid", value: `mostar os status da covid-19 pelo mundo` },
-                    { name: "kiss", value: `beija um usuario(a)` }
+		            { name: "Ping", value: `` },
+                    { name: "Botinfo", value: `` },
+                    { name: "Serveinfo", value: `` },
+                    { name: "", value: `` },
+                    { name: "", value: `` },
+                    { name: "", value: `` },
+                    { name: "", value: `` },
+                    { name: "", value: `` },
+                    
 		        )
 		})
 		
@@ -77,20 +82,11 @@ exports.run = async (client, message, args) => {
 		        .setDescription()
 		        .setColor()
 		        .addFields(
-		            { name: "", value: `` },
-                    { name: "", value: `` },
-                    { name: "", value: `` },
-                    { name: "", value: `` }
-		        )
-		})
-		
-		coletor4.on('collect', c => {
-		    let embed = new Discord.MessageEmbed()
-		        .setTitle()
-		        .setDescription()
-		        .setColor()
-		        .addFields(
-		            { name: "", value: `` },
+		            { name: "Avatar", value: `Mostra o avatar do usuario` },
+                    { name: "clima", value: `mostar o clima` },
+                    { name: "covid", value: `mostar os status da covid-19 pelo mundo` },
+                    { name: "kiss", value: `beija um usuario(a)` },
+                    { name: "Translate", value: `` },
                     { name: "", value: `` },
                     { name: "", value: `` },
                     { name: "", value: `` }
