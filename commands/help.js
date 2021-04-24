@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
 		    escolha a cartegoria:
 	 🛠 moderação
 	 💰 Economia
-	 📡 Status
+	 📡 Info
 	 😂 Diversão
 	 `)
 		.setColor('#8A2BE2');
@@ -38,7 +38,8 @@ exports.run = async (client, message, args) => {
                     { name: "lock", value: `Fecha um canal` },
                     { name: "unlock", value: `Destrava um canal` },
                     { name: "clear", value: `Limpa mensagens do canal` },
-                    { name: "say", value: `Fechado por motivos de segurança` }
+                    { name: "say", value: `Fechado por motivos de segurança` },
+                    { name: "emoji" , value: `mostar informações sobre o emoji` }
 				)
 				.setColor('#8A2BE2');
 
@@ -64,15 +65,9 @@ exports.run = async (client, message, args) => {
 		        .setDescription(``)
 		        .setColor('#8A2BE2')
 		        .addFields(
-		            { name: "Ping", value: `` },
-                    { name: "Botinfo", value: `` },
-                    { name: "Serveinfo", value: `` },
-                    { name: "", value: `` },
-                    { name: "", value: `` },
-                    { name: "", value: `` },
-                    { name: "", value: `` },
-                    { name: "", value: `` },
-                    
+		            { name: "Ping", value: `mostra o ping do bot` },
+                    { name: "Botinfo", value: `em manutenção` },
+                    { name: "Serveinfo", value: `mostra informações do server` }
 		        )
 		})
 		
@@ -86,10 +81,7 @@ exports.run = async (client, message, args) => {
                     { name: "clima", value: `mostar o clima` },
                     { name: "covid", value: `mostar os status da covid-19 pelo mundo` },
                     { name: "kiss", value: `beija um usuario(a)` },
-                    { name: "Translate", value: `` },
-                    { name: "", value: `` },
-                    { name: "", value: `` },
-                    { name: "", value: `` }
+                    { name: "Translate", value: `faz tradução` }
 		        )
 		})
 		
