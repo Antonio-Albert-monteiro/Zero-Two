@@ -49,10 +49,10 @@ exports.run = async (client, message, args) => {
 		coletor1.on('collect', c => {
 			let embed = new Discord.MessageEmbed()
 				.setTitle(`Central de comandos`)
-				.setDescription("Economia")
-				.addFields(
-				    { name: "Em desemvolvimento", value "mas em breve estar on"}
-				)
+				.setDescription("
+				    Economia
+				em desemvolvimento
+				")
 			 )
 				.setColor('#8A2BE2');
 
