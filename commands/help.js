@@ -31,7 +31,7 @@ exports.run = async (client, message, args) => {
 		coletor.on('collect', c => {
 			let embed = new Discord.MessageEmbed()
 				.setTitle(`Central de comandos`)
-				.setDescription(`moderação`)
+				.setDescription("moderação")
 				.addFields(
                     { name: "Ban", value: `Bani um usuario do server` },
                     { name: "kick", value: `Kicka um usuario para fora do server` },
@@ -49,7 +49,7 @@ exports.run = async (client, message, args) => {
 		coletor1.on('collect', c => {
 			let embed = new Discord.MessageEmbed()
 				.setTitle(`Central de comandos`)
-				.setDescription(`Economia`)
+				.setDescription("Economia")
 				.addFields(
 				    { name: "Em desemvolvimento", value "mas em breve estar on"}
 				)
@@ -62,7 +62,7 @@ exports.run = async (client, message, args) => {
 		coletor2.on('collect', c => {
 		    let embed = new Discord.MessageEmbed()
 		        .setTitle("Central de comandos")
-		        .setDescription(`Info`)
+		        .setDescription("Info")
 		        .setColor('#8A2BE2')
 		        .addFields(
 		            { name: "Ping", value: `mostra o ping do bot` },
