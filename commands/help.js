@@ -62,7 +62,7 @@ exports.run = async (client, message, args) => {
 		coletor2.on('collect', c => {
 		    let embed = new Discord.MessageEmbed()
 		        .setTitle("Central de comandos")
-		        .setDescription(``)
+		        .setDescription(`Info`)
 		        .setColor('#8A2BE2')
 		        .addFields(
 		            { name: "Ping", value: `mostra o ping do bot` },
@@ -73,9 +73,9 @@ exports.run = async (client, message, args) => {
 		
 		coletor3.on('collect', c => {
 		    let embed = new Discord.MessageEmbed()
-		        .setTitle()
-		        .setDescription()
-		        .setColor()
+		        .setTitle("Central de comandos")
+		        .setDescription("Diversão")
+		        .setColor('#8A2BE2')
 		        .addFields(
 		            { name: "Avatar", value: `Mostra o avatar do usuario` },
                     { name: "clima", value: `mostar o clima` },
