@@ -20,7 +20,7 @@ exports.run = async (client, message, args) => {
 		let filtro1 = (r, u) => r.emoji.name === '🛠' && u.id === message.author.id;
 		let filtro2 = (r, u) => r.emoji.name === '💰' && u.id === message.author.id;
 		let filtro3 = (r, u) => r.emoji.name === '📡' && u.id === message.author.id;
-		let filtro4 = (r, u) => r.emoji.name === '😂' && message.author.id;
+		let filtro4 = (r, u) => r.emoji.name === '😂' && u.id === message.author.id;
 		
 		
 		let coletor = msg.createReactionCollector(filtro1);
