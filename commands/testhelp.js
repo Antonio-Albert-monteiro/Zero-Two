@@ -58,8 +58,5 @@ exports.run = async (message, args) => {
 		    )
 		   msg.edit(embed);
 		})
-		coletor2.on('collect', c => {
-		    
-		})
     })
 }
