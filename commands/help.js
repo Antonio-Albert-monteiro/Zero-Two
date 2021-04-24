@@ -33,13 +33,13 @@ exports.run = async (client, message, args) => {
 				.setTitle(`Central de comandos`)
 				.setDescription("moderação")
 				.addFields(
-                    { name: "Ban", value: `Bani um usuario do server` },
-                    { name: "kick", value: `Kicka um usuario para fora do server` },
-                    { name: "lock", value: `Fecha um canal` },
-                    { name: "unlock", value: `Destrava um canal` },
-                    { name: "clear", value: `Limpa mensagens do canal` },
-                    { name: "say", value: `Fechado por motivos de segurança` },
-                    { name: "emoji" , value: `mostar informações sobre o emoji` }
+                    { name: "Ban", value: "Bani um usuario do server" },
+                    { name: "kick", value: "Kicka um usuario para fora do server" },
+                    { name: "lock", value: "Fecha um canal" },
+                    { name: "unlock", value: "Destrava um canal" },
+                    { name: "clear", value: "Limpa mensagens do canal" },
+                    { name: "say", value: "Fechado por motivos de segurança" },
+                    { name: "emoji" , value: "mostar informações sobre o emoji" }
 				)
 				.setColor('#8A2BE2');
 
@@ -65,9 +65,9 @@ exports.run = async (client, message, args) => {
 		        .setDescription("Info")
 		        .setColor('#8A2BE2')
 		        .addFields(
-		            { name: "Ping", value: `mostra o ping do bot` },
-                    { name: "Botinfo", value: `em manutenção` },
-                    { name: "Serveinfo", value: `mostra informações do server` }
+		            { name: "Ping", value: "mostra o ping do bot" },
+                    { name: "Botinfo", value: "em manutenção" },
+                    { name: "Serveinfo", value: "mostra informações do server" }
 		        )
 		})
 		
@@ -77,11 +77,11 @@ exports.run = async (client, message, args) => {
 		        .setDescription("Diversão")
 		        .setColor('#8A2BE2')
 		        .addFields(
-		            { name: "Avatar", value: `Mostra o avatar do usuario` },
-                    { name: "clima", value: `mostar o clima` },
-                    { name: "covid", value: `mostar os status da covid-19 pelo mundo` },
-                    { name: "kiss", value: `beija um usuario(a)` },
-                    { name: "Translate", value: `faz tradução` }
+		            { name: "Avatar", value: "Mostra o avatar do usuario" },
+                    { name: "clima", value: "mostar o clima" },
+                    { name: "covid", value: "mostar os status da covid-19 pelo mundo" },
+                    { name: "kiss", value: "beija um usuario" },
+                    { name: "Translate", value: "faz tradução" }
 		        )
 		})
 		
