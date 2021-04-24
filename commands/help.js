@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
 
 		coletor.on('collect', c => {
 			let embed = new Discord.MessageEmbed()
-				.setTitle(`Central de comandos`)
+				.setTitle("Central de comandos")
 				.setDescription("moderação")
 				.addFields(
                     { name: "Ban", value: "Bani um usuario do server" },
@@ -44,11 +44,11 @@ exports.run = async (client, message, args) => {
 				.setColor('#8A2BE2');
 
 			msg.edit(embed);
-		});
+		})
 
 		coletor1.on('collect', c => {
 			let embed = new Discord.MessageEmbed()
-				.setTitle(`Central de comandos`)
+				.setTitle("Central de comandos")
 				.setDescription("
 				    Economia
 				em desemvolvimento
@@ -57,7 +57,7 @@ exports.run = async (client, message, args) => {
 				.setColor('#8A2BE2');
 
 			msg.edit(embed);
-		});
+		})
 		
 		coletor2.on('collect', c => {
 		    let embed = new Discord.MessageEmbed()
