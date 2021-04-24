@@ -10,7 +10,7 @@ exports.run = async (client, message, args) => {
 	 📡 Status
 	 😂 Diversão
 	 `)
-		.setColor('#FF0020');
+		.setColor('#8A2BE2');
 	message.channel.send(embed).then(msg => {
 		msg.react('🛠');
 		msg.react('💰');
@@ -48,12 +48,54 @@ exports.run = async (client, message, args) => {
 		coletor1.on('collect', c => {
 			let embed = new Discord.MessageEmbed()
 				.setTitle(`Central de comandos`)
-				.setDescription(`
-				Economia
-			 Em desemvolvimento`)
+				.setDescription(`Economia`)
+				.addFields(
+				    { name: "Em desemvolvimento", value `;-;`}
+				)
+			 )
 				.setColor('#8A2BE2');
 
 			msg.edit(embed);
 		});
+		
+		coletor2.on('collect', c => {
+		    let embed = new Discord.MessageEmbed()
+		        .setTitle()
+		        .setDescription()
+		        .setColor()
+		        .addFields(
+		            { name: "Avatar", value: `Mostra o avatar do usuario` },
+                    { name: "clima", value: `mostar o clima` },
+                    { name: "covid", value: `mostar os status da covid-19 pelo mundo` },
+                    { name: "kiss", value: `beija um usuario(a)` }
+		        )
+		})
+		
+		coletor3.on('collect', c => {
+		    let embed = new Discord.MessageEmbed()
+		        .setTitle()
+		        .setDescription()
+		        .setColor()
+		        .addFields(
+		            { name: "", value: `` },
+                    { name: "", value: `` },
+                    { name: "", value: `` },
+                    { name: "", value: `` }
+		        )
+		})
+		
+		coletor4.on('collect', c => {
+		    let embed = new Discord.MessageEmbed()
+		        .setTitle()
+		        .setDescription()
+		        .setColor()
+		        .addFields(
+		            { name: "", value: `` },
+                    { name: "", value: `` },
+                    { name: "", value: `` },
+                    { name: "", value: `` }
+		        )
+		})
+		
 		});
 	}
