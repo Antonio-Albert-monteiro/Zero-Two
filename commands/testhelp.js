@@ -34,10 +34,10 @@ exports.run = async (message, args) => {
 		    .setDescription("Moderação")
 		    .setColor('#8A2BE2')
 		    .addFields(
-		        { name: "ban", value: `` },
-		        { name: "kick", value: `` },
-		        { name: "lock", value: `` },
-		        { name: "unlock", value: `` }
+		        { name: "ban", value: `bani um usuario` },
+		        { name: "kick", value: `kicka um usuario para fora do server` },
+		        { name: "lock", value: `fecha um canal` },
+		        { name: "unlock", value: `desbloquea um canal` }
 		    )
 		   msg.edit(embed);
 		})
