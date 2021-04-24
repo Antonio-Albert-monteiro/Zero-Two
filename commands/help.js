@@ -51,7 +51,7 @@ exports.run = async (client, message, args) => {
 				.setTitle(`Central de comandos`)
 				.setDescription(`Economia`)
 				.addFields(
-				    { name: "Em desemvolvimento", value ";-;"}
+				    { name: "Em desemvolvimento", value "mas em breve estar on"}
 				)
 			 )
 				.setColor('#8A2BE2');
