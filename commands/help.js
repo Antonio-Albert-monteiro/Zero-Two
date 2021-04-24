@@ -39,7 +39,7 @@ exports.run = async (client, message, args) => {
                     { name: "unlock", value: "Destrava um canal" },
                     { name: "clear", value: "Limpa mensagens do canal" },
                     { name: "say", value: "Fechado por motivos de segurança" },
-                    { name: "emoji" , value: "mostar informações sobre o emoji" }
+                    { name: "emoji", value: "mostar informações sobre o emoji" }
 				)
 				.setColor('#8A2BE2');
 
