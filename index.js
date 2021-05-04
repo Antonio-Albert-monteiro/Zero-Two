@@ -75,10 +75,10 @@ client.on("message", message => {
   if (message.channel.type == "DM") return;
   if (message.author.bot) return;
   
-  database.ref(`Xp/${message.author.id}`)
+  database.ref(`Xp/Usuarios/${message.author.id}`)
   .once("value").then(async function(db) {
     if (db.val() == null) {
-      database.ref(`Xp/${message.author.id}`)
+      database.ref(`Xp/Usuarios/${message.author.id}`)
       .set ({
         xp: 0,
         level: 1,
@@ -89,7 +89,7 @@ client.on("message", message => {
         let geralimite = Math.floor(Math.random() * 550) + 250;
         
       if (db.val().limite <= db.val().xp) {
-        database.ref(`Xp/${message.author.id}`)
+        database.ref(`Xp/Usuarios/${message.author.id}`)
         .update ({
           xp: db.val().xp + geraXP,
           level: db.val().level + 1,
@@ -97,7 +97,7 @@ client.on("message", message => {
        })
       message.channel.send(`parabens ${message.author} vc passou para o nivel ${db.val().level+1}`)
       } else {
-        database.ref(`Xp/${message.author.id}`)
+        database.ref(`Xp/Usuarios/${message.author.id}`)
         .update ({
           xp: db.val().xp + geraXP
         })
